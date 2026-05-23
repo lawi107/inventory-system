@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1> Inventory Management System</h1>
+
+  
+    <div class="dashboard">
+
+        <div class="card">
+            <h2 id="totalProducts">0</h2>
+            <p>Total Products</p>
+        </div>
+
+        <div class="card">
+            <h2 id="inventoryValue">₱0</h2>
+            <p>Total Inventory Value</p>
+        </div>
+
+    </div>
+
+    
+    <div class="form-box">
+
+        <input type="text" id="name" placeholder="Product Name">
+
+        <input type="text" id="category" placeholder="Category">
+
+        <input type="number" id="price" placeholder="Price">
+
+        <input type="number" id="qty" placeholder="Quantity">
+
+        <button onclick="addProduct()" class="add-btn">
+            Add Product
+        </button>
+
+    </div>
+
+   
+    <div class="search-box">
+
+        <input type="text"
+        id="search"
+        placeholder="Search Product..."
+        onkeyup="searchProduct()">
+
+    </div>
+
+    
+    <div class="top-buttons">
+
+        <button class="clear-btn"
+        onclick="clearAllProducts()">
+        Clear All Products
+        </button>
+
+    </div>
+
+    
+    <div class="table-box">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="productList"></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
